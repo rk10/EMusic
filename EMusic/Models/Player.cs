@@ -29,6 +29,7 @@ namespace EMusic.Models
                         ChangeProgress(_player.controls.currentPosition, _player.controls.currentItem.duration);
                     if (EndTrack != null && IsEndTrack())
                         EndTrack(Track);
+                    _isChangeTrack = false;
                 }
                     
             });
@@ -37,13 +38,14 @@ namespace EMusic.Models
 
         private Track _saveTrack;
         private double _savePos;
+        private bool _isChangeTrack = false;
 
         bool IsEndTrack()
         {
             bool res =
                 (_player.controls.currentPosition >= _player.controls.currentItem.duration &&
                 _player.controls.currentItem.duration > 0) ||
-                (_saveTrack == Track && _player.controls.currentPosition <= 0 && _savePos > 0);
+                (_saveTrack == Track && _player.controls.currentPosition <= 0 && _savePos > 0 && _isChangeTrack);
 
             _saveTrack = _track;
             _savePos = _player.controls.currentPosition;
@@ -75,6 +77,7 @@ namespace EMusic.Models
 
         public void Play()
         {
+            _isChangeTrack = true;
             _player.controls.play();
         }
 
