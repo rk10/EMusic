@@ -45,7 +45,7 @@ namespace EMusic.Models
             bool res =
                 (_player.controls.currentPosition >= _player.controls.currentItem.duration &&
                 _player.controls.currentItem.duration > 0) || 
-                (_saveTrack == Track && _player.controls.currentPosition <= 0 && _savePos > 0 && _isChangeTrack);
+                (_saveTrack == Track && _player.controls.currentPosition <= 0 && _savePos > 0 && !_isChangeTrack);
 
             _saveTrack = _track;
             _savePos = _player.controls.currentPosition;

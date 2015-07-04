@@ -41,3 +41,5 @@ C:\Projects\EMusic\EMusic\obj\Release\EMusic.Properties.Resources.resources
 C:\Projects\EMusic\EMusic\obj\Release\EMusic.csproj.GenerateResource.Cache
 C:\Projects\EMusic\EMusic\obj\Release\EMusic.exe
 C:\Projects\EMusic\EMusic\obj\Release\EMusic.pdb
+C:\Projects\EMusic\EMusic\obj\Release\Views\Page1.baml
+C:\Projects\EMusic\EMusic\obj\Release\Views\Page1.g.cs
